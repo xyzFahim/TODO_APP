@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 //MongoDB connection
 connectDB()
 
+
+app.get('/', (req, res) => { res.json({ message : 'Welcome to ToDO App!'})});
+
 const port = 5000
 app.listen(port , ()=> {
     console.log(`Server running on port ${port}`);   
