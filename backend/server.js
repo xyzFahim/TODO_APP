@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 //MongoDB connection
 connectDB()
 
+//Routes
+app.use('/api/users', require('./Routes/Api/Users'));
+
 
 app.get('/', (req, res) => { res.json({ message : 'Welcome to ToDO App!'})});
 
